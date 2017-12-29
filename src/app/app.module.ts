@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
     { path: '', component: LandingPageComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LandingPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
