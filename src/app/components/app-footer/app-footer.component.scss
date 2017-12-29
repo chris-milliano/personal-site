@@ -1,0 +1,28 @@
+@import "../../../assets/scss/variables.scss";
+
+@keyframes heart-beat {
+    0% { color: #c55a54 }
+    33% { color: #a83f39 }
+    66% { color: #b5322b}
+    // 100% { color: #f00 }
+}
+
+#app-footer {
+
+    #footer__made-with-love {
+        background-color: $dk-grey;
+        color: $wht;
+
+        #made-with-love__text {
+            margin: 1vh auto;
+            font-size: 12px;
+            letter-spacing: 2px;
+
+            .fa-heart {
+                color: #c55a54;
+                animation: heart-beat ease infinite alternate;
+                animation-duration: 2s;
+            }
+        }
+    }
+}
