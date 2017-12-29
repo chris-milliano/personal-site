@@ -1,12 +1,111 @@
 @import "../../../assets/scss/variables.scss";
 
+// Mixin to place items on a circle
+@mixin on-circle($item-count, $circle-size, $item-size) {
+    position: relative;
+    width:  $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+
+    > * {
+        display: block;
+        position: absolute;
+        top:  50%;
+        left: 50%;
+        margin: -($item-size / 2);
+        width:  $item-size;
+        height: $item-size;
+
+        $angle: (360 / $item-count);
+        $rot: 0;
+
+        @for $i from 1 through $item-count {
+            &:nth-of-type(#{$i}) {
+                transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+            }
+            $rot: $rot + $angle;
+        }
+    }
+}
+
 @keyframes heart-beat {
-    0% { color: #c55a54 }
-    33% { color: #a83f39 }
-    66% { color: #b5322b}
+    0% { color: #c55a54; }
+    33% { color: #a83f39; }
+    66% { color: #b5322b; }
 }
 
 #app-footer {
+
+    #footer__social {
+        overflow-y: visible;
+        padding-bottom: 50px;
+
+        .circle-container {
+            @include on-circle($item-count: 6, $circle-size: 250px, $item-size: 70px);
+            margin: 50px auto 0;
+            border: solid 5px $dk-grey;
+            background: #fff url(/assets/images/footer/stay_tuned_bitmoji.jpg) no-repeat center center;
+            background-size: contain;
+
+
+            li {
+                background-color: #000;
+                border-radius: 50%;
+                transition: .5s;
+
+                &:hover {
+                    background-color: $dk-grey;
+                }
+            }
+
+            .circle__item {
+                display: flex;
+                justify-content: center;
+                max-width: 70px;
+                height: 70px;
+                transition: .5s;
+                color: #fff;
+
+                &:hover {
+                    transform: scale(1.2);
+                    color: #000;
+                }
+
+                &:after {
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 40px;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        #github:after {
+            content: "\f09b";
+        }
+        #codepen:after {
+            content: "\f1cb";
+        }
+        #instagram:after {
+            content: "\f16d";
+        }
+        #twitter:after {
+            content: "\f099";
+        }
+        #linkedin:after {
+            content: "\f0e1";
+        }
+        #mailto:after {
+            content: "\f003";
+        }
+    }
+
 
     #footer__made-with-love {
         background-color: $dk-grey;
@@ -14,7 +113,7 @@
 
         #made-with-love__text {
             margin: 1vh auto;
-            font-size: 12px;
+            font-size: 10px;
             letter-spacing: 2px;
 
             .fa-heart {
