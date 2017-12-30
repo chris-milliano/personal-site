@@ -8,6 +8,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AppFooterComponent } from './components/app-footer/app-footer.component';
+import { LandingAboutComponent } from './components/landing-about/landing-about.component';
 
 const routes: Routes = [
     { path: '', component: LandingPageComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
     LandingPageComponent,
     ContactPageComponent,
     WelcomeComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    LandingAboutComponent
   ],
   imports: [
     BrowserModule,

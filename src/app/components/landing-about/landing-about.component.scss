@@ -1,0 +1,152 @@
+@import "../../../assets/scss/variables.scss";
+
+#landing-about {
+    position: relative;
+    color: $br-orange;
+
+    #about-me-text-and-pic {
+    position: relative;
+
+
+        #about-me-text-container {
+            width: 90%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px 0;
+            background-color: $dk-grey;
+        }
+
+        #about-me-pic-container {
+            width: 90%;
+            max-width: 500px;
+            height: 90vw;
+            max-height: 500px;
+            margin: 0 auto;
+            background: $br-orange url(/assets/images/landing/about.jpg) no-repeat center center;
+            background-size: contain;
+            background-blend-mode: multiply;
+        }
+
+        #about-me-pic-desktop-container {
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: $br-orange url(/assets/images/landing/about.jpg) no-repeat center center;
+            background-size: contain;
+            background-blend-mode: multiply;
+            z-index: -1;
+            right: 0;
+            bottom: 12px;
+            -webkit-box-shadow: 0 8px 12px -6px black;
+            -moz-box-shadow: 0 8px 12px -6px black;
+            box-shadow: 0 8px 12px -6px black;
+            opacity: 0;
+        }
+
+        .text {
+            width: 80%;
+            font-size: 20px;
+        }
+    }
+
+    #about-me-cta-arrow {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.5em;
+
+
+        color: $br-orange;
+        transition: all 1.5s ease;
+        margin: 0 1vw;
+
+        &:hover {
+            transform: scale(.95);
+            color: $dk-grey;
+            cursor: pointer;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #about-me-text-and-pic {
+        width: 800px;
+        //height: 850px;
+
+        #about-me-text-container {
+            // position: absolute;
+            // z-index: 3;
+            // left: 0;
+            // top: 0;
+            margin-left: 0 !important;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            -webkit-box-shadow: 0 8px 12px -6px black;
+            -moz-box-shadow: 0 8px 12px -6px black;
+            box-shadow: 0 8px 12px -6px black;
+        }
+
+        #about-me-pic-container {
+            // position: absolute;
+            // z-index: 2;
+            // right: 0;
+            // bottom: 12px;
+            margin-right: 12px !important;
+            margin-bottom: 12px !important;
+            margin-top: -60px !important;
+            -webkit-box-shadow: 0 8px 12px -6px black;
+            -moz-box-shadow: 0 8px 12px -6px black;
+            box-shadow: 0 8px 12px -6px black;
+            opacity: 0;
+        }
+
+        #about-me-pic-desktop-container {
+            width: 90vw  !important;
+            max-width: 500px !important;
+            height: 90vw !important;
+            max-height: 500px !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+// @media only screen and (min-width: 768px) {
+//
+//     #about-me-text-and-pic {
+//         width: 800px;
+//         height: 850px;
+//
+//         #about-me-text-container {
+//             position: absolute;
+//             z-index: 3;
+//             left: 0;
+//             top: 0;
+//             max-width: 600px;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             -webkit-box-shadow: 0 8px 12px -6px black;
+//             -moz-box-shadow: 0 8px 12px -6px black;
+//             box-shadow: 0 8px 12px -6px black;
+//         }
+//
+//         #about-me-pic-container {
+//             position: absolute;
+//             z-index: 2;
+//             right: 0;
+//             bottom: 12px;
+//             -webkit-box-shadow: 0 8px 12px -6px black;
+//             -moz-box-shadow: 0 8px 12px -6px black;
+//             box-shadow: 0 8px 12px -6px black;
+//         }
+//     }
+// }
