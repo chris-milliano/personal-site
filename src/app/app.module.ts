@@ -11,10 +11,12 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
 import { LandingAboutComponent } from './components/landing-about/landing-about.component';
 import { LandingWorkComponent } from './components/landing-work/landing-work.component';
 import { LandingHireComponent } from './components/landing-hire/landing-hire.component';
+import { HirePageComponent } from './pages/hire-page/hire-page.component';
 
 const routes: Routes = [
     { path: '', component: LandingPageComponent },
-    { path: 'contact', component: ContactPageComponent }
+    { path: 'contact', component: ContactPageComponent },
+    { path: 'hire', component: HirePageComponent }
 ]
 
 
@@ -27,7 +29,8 @@ const routes: Routes = [
     AppFooterComponent,
     LandingAboutComponent,
     LandingWorkComponent,
-    LandingHireComponent
+    LandingHireComponent,
+    HirePageComponent
   ],
   imports: [
     BrowserModule,
