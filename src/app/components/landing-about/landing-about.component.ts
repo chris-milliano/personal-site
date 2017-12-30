@@ -12,7 +12,7 @@ export class LandingAboutComponent implements OnInit {
     ngOnInit() {}
 
     scrollTo (toElem: string) {
-        console.log(`scrollTo(\'${toElem}\')`);
+        console.log(`Clicked: scrollTo(\'${toElem}\')`);
 
         alert("Scroll functionality is under construction. Sorry for the inconvenience.")
     }

@@ -9,6 +9,8 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AppFooterComponent } from './components/app-footer/app-footer.component';
 import { LandingAboutComponent } from './components/landing-about/landing-about.component';
+import { LandingWorkComponent } from './components/landing-work/landing-work.component';
+import { LandingHireComponent } from './components/landing-hire/landing-hire.component';
 
 const routes: Routes = [
     { path: '', component: LandingPageComponent },
@@ -23,7 +25,9 @@ const routes: Routes = [
     ContactPageComponent,
     WelcomeComponent,
     AppFooterComponent,
-    LandingAboutComponent
+    LandingAboutComponent,
+    LandingWorkComponent,
+    LandingHireComponent
   ],
   imports: [
     BrowserModule,
