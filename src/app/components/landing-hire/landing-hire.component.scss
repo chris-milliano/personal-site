@@ -2,5 +2,34 @@
 
 #landing-hire {
     background-color: $dk-grey;
-    color: $br-orange;
+    color: $wht;
+
+    .title {
+        color: $br-orange;
+    }
+
+    #hire__text {
+        width: 80%;
+        max-width: 800px;
+
+        hr {
+            width: 50%;
+        }
+    }
+
+    #landing-hire__cta {
+
+        .button {
+            color: $wht;
+            border-color: $wht;
+            background-color: $br-orange;
+
+
+            &:hover {
+                color: $br-orange;
+                background-color: $wht;
+                border-color: $blk;
+            }
+        }
+    }
 }
