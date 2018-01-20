@@ -4,4 +4,58 @@
     background-color: $br-orange;
     color: $blk;
 
+    #landing-work__items {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .landing-work-item {
+            width: 90%;
+            max-width: 350px;
+            margin: 10px 25px;
+            padding: 10px;
+            background-color: $dk-grey;
+            color: $wht;
+
+            .landing-work-item__title {
+                text-align: center;
+                margin: 5px auto;
+                color: $wht;
+            }
+
+            .landing-work-item__info {
+                text-align: center;
+
+                .fa-circle-o {
+                    color: $br-orange;
+                }
+
+                .fa-inverse {
+                    color: $blk;
+                }
+
+                ul {
+                    list-style: none;
+                    width: 80%;
+                    margin: 0 auto;
+                    padding: 0;
+
+                    li {
+                        color: $wht;
+                    }
+
+                    li:not(:last-child):after {
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        width: 33%;
+                        margin: 5px auto;
+                        background: $dk-orange;
+                    }
+                }
+            }
+        }
+    }
 }
