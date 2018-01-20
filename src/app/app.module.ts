@@ -9,14 +9,17 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AppFooterComponent } from './components/app-footer/app-footer.component';
 import { LandingAboutComponent } from './components/landing-about/landing-about.component';
-import { LandingWorkComponent } from './components/landing-work/landing-work.component';
+import { RecruiterWorkComponent } from './components/recruiter-work/recruiter-work.component';
 import { LandingHireComponent } from './components/landing-hire/landing-hire.component';
 import { HirePageComponent } from './pages/hire-page/hire-page.component';
+import { WorkPageComponent } from './pages/work-page/work-page.component';
+import { LandingWorkComponent } from './components/landing-work/landing-work.component';
 
 const routes: Routes = [
     { path: '', component: LandingPageComponent },
     { path: 'contact', component: ContactPageComponent },
-    { path: 'hire', component: HirePageComponent }
+    { path: 'hire', component: HirePageComponent },
+    { path: 'work', component: WorkPageComponent  }
 ]
 
 
@@ -28,9 +31,11 @@ const routes: Routes = [
     WelcomeComponent,
     AppFooterComponent,
     LandingAboutComponent,
-    LandingWorkComponent,
+    RecruiterWorkComponent,
     LandingHireComponent,
-    HirePageComponent
+    HirePageComponent,
+    WorkPageComponent,
+    LandingWorkComponent
   ],
   imports: [
     BrowserModule,
