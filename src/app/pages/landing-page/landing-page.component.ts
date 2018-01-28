@@ -13,4 +13,10 @@ export class LandingPageComponent implements OnInit {
         console.log("Init landing-page.component");
     }
 
+
+    scroll(el) {
+        //el.scrollIntoView();
+        console.log("scrollIntoView:", el)
+    }
+
 }

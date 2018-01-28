@@ -1,13 +1,15 @@
 <div id="landing-page" class="container">
 
-    <app-welcome></app-welcome>
+    <button (click)="scroll(work)">go to work</button>
 
-    <landing-about></landing-about>
+    <app-welcome #welcome></app-welcome>
 
-    <landing-work></landing-work>
+    <landing-about #about></landing-about>
 
-    <landing-hire></landing-hire>
+    <landing-work #work></landing-work>
 
-    <app-footer></app-footer>
+    <landing-hire #hire></landing-hire>
+
+    <app-footer #footer></app-footer>
 
 </div>
